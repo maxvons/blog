@@ -1,0 +1,33 @@
+@import "variables";
+@import "typography";
+
+.card-dark {
+  padding: 3.2rem;
+  border: 2px solid $color-border-dark;
+  border-radius: $border-radius;
+  position: relative;
+  font-family: $font-stack-sans;
+  margin-bottom: $spacer-large;
+  background-color: $color-background-card-dark;
+  color: $color-text-primary-white;
+  text-decoration: none;
+}
+
+.card-heading-dark {
+  font-size: $font-size-heading;
+  font-weight: $font-weight-black;
+  margin-bottom: $spacer-medium;
+  line-height: 1;
+  max-width: 30rem;
+}
+
+.excerpt-dark {
+  font-size: $font-size-normal;
+  font-family: $font-stack-serif;
+  line-height: 1.5;
+  max-width: 30rem;
+}
+
+.right-margin-large {
+  margin-right: $spacer-large;
+}

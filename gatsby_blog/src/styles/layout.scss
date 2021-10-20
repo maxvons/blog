@@ -1,0 +1,97 @@
+@import "variables";
+@import "typography";
+
+* {
+  font-variant-numeric: lining-nums;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+body {
+  background-color: $color-background;
+  width: 100%;
+  margin: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+p  {
+  font-size: 2rem;
+}
+
+.header {
+  margin-bottom: $spacer-large;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90%;
+  margin: auto;
+  margin-bottom: $spacer-large;
+}
+
+.main-content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.footer {
+  color: $color-text-secondary;
+  text-transform: uppercase;
+  font-size: $font-size-uppercase;
+  letter-spacing: $letter-spacing-uppercase;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacer-medium;
+  text-align: center;
+}
+
+.page-title {
+  align-self: center;
+}
+
+.main-title {
+  color: $color-text-primary;
+  font-size: $font-size-title;
+  font-weight: $font-weight-black;
+  font-family: $font-stack-sans;
+  line-height: 1;
+}
+
+.mini-title {
+  color: $color-text-secondary;
+  font-size: $font-size-uppercase;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-uppercase;
+  text-transform: uppercase;
+  margin-bottom: $spacer-small;
+}
+
+.primary-color {
+  color: $color-primary-600;
+}
+
+.muted {
+  color: $color-text-muted;
+}

@@ -1,0 +1,72 @@
+@import "variables";
+@import "typography";
+
+.landing-div {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+  color: $color-text-primary;
+}
+
+.giving-back-div {
+  margin-bottom: $spacer-very-large;
+}
+
+.two-choices-wrapper {
+  background-color: $color-background-dark;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: $spacer-large 0;
+  margin-bottom: $spacer-very-large;
+}
+
+.two-choices-div {
+  background-color: $color-background-dark;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.two-choices-text-div {
+  margin-bottom: $spacer-large;
+}
+
+.two-choices-cards-div {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.heading {
+  font-size: $font-size-heading;
+  font-family: $font-stack-sans;
+  font-weight: $font-weight-black;
+  margin-bottom: $spacer-medium;
+  max-width: 60rem;
+}
+
+.light {
+  color: $color-text-primary-white;
+}
+
+.muted-light {
+  color: $color-text-secondary-white;
+}
+
+.margin-bottom {
+  margin-bottom: $spacer-small;
+}
+
+.margin-bottom-large {
+  margin-bottom: $spacer-large;
+}
+
+.normal-text {
+  max-width: 60rem;
+  font-size: $font-size-normal;
+  font-family: $font-stack-serif;
+  font-weight: $font-weight-normal;
+  line-height: 1.5;
+}
