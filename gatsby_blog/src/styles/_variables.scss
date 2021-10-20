@@ -1,0 +1,85 @@
+// Primary color variations
+$color-primary-600: #ec0035;
+$color-primary-100: #ffc9d2;
+
+// Secondary color variations
+$color-secondary-50: #d6fbee;
+
+// Dark text colors
+$color-text-primary: #332b1e;
+$color-text-secondary: #6e6961;
+$color-text-muted: #bdbdbd;
+
+// Light text colors
+$color-text-primary-white: #e4e3e2;
+$color-text-secondary-white: #727171;
+
+// Light background colors
+$color-background: #ffffff;
+
+// Dark background colors
+$color-background-dark: #000000;
+$color-background-card-dark: #212121;
+
+// Light element colors
+$color-shadow-heart: rgba(236, 0, 53, 0.2);
+
+// Light element colors
+$color-border: #e1e1e1;
+$color-shadow-card: #e1e1e1;
+
+// Dark element colors
+$color-border-dark: #969595;
+
+// Shadows
+$shadow-card: 0px 15px 37.5px $color-shadow-card;
+
+// Font stacks
+$font-stack-sans: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-stack-serif: Merriweather, Georgia, "Times New Roman", serif;
+
+// Font weights
+$font-weight-black: 900;
+$font-weight-bold: 700;
+$font-weight-normal: 400;
+
+// Font sizes desktop
+$font-size-title: 11rem;
+$font-size-heading: 3.6rem;
+$font-size-normal: 2rem;
+$font-size-secondary: 1.4rem;
+$font-size-uppercase: 1.2rem;
+
+// Font sizes mobile
+$font-size-title-mobile: 4.8rem;
+$font-size-heading-mobile: 2.4rem;
+$font-size-normal-mobile: 1.8rem;
+$font-size-secondary-mobile: 1.2rem;
+$font-size-uppercase-mobile: 1rem;
+
+// Letter spacing
+$letter-spacing-uppercase: 0.15em;
+
+// Border radius
+$border-radius: 0.8rem;
+
+// Container widths for desktop
+$width-navbar: 90%;
+$width-body: 80%;
+$width-body-maximum: 150rem;
+
+// Container widths for mobile
+$width-navbar-mobile: 95%;
+$width-body-mobile: 90%;
+
+// Spacers
+$spacer-very-large: 12.8rem;
+$spacer-large-plus: 9.6rem;
+$spacer-large: 6.4rem;
+$spacer-medium-plus: 4.8rem;
+$spacer-medium: 3.2rem;
+$spacer-small-plus: 2.4rem;
+$spacer-small: 1.6rem;
+$spacer-very-small-plus: 1.2rem;
+$spacer-very-small: 0.8rem;
+$spacer-mini: 0.4rem;
