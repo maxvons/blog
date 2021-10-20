@@ -1,6 +1,9 @@
 // React
 import React from "react";
 
+// Gatsby
+import { Link } from "gatsby";
+
 // Assets
 import ArrowIcon from "../assets/arrow_icon.svg";
 
@@ -48,14 +51,14 @@ const Card = ({
         })}
       </div>
       <p className="excerpt">{excerpt}</p>
-      <a href={path} className="read-article-button">
+      <Link to={path} className="read-article-button">
         <span className="read-article-text">Read article </span>
         <img
           className="read-article-icon"
           alt="Read article icon"
           src={ArrowIcon}
         ></img>
-      </a>
+      </Link>
     </div>
   );
 };

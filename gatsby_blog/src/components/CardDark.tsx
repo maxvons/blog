@@ -1,6 +1,9 @@
 // React
 import React from "react";
 
+// Gatsby
+import { Link } from "gatsby";
+
 // Styles
 import "../styles/card_dark.scss";
 
@@ -20,10 +23,10 @@ const CardDark = ({
   const classes = `card-dark ${rightMargin && "right-margin-large"}`;
 
   return (
-    <a className={classes} href={path}>
+    <Link to={path} className={classes}>
       <h2 className="card-heading-dark">{heading}</h2>
       <p className="excerpt-dark">{excerpt}</p>
-    </a>
+    </Link>
   );
 };
 
