@@ -13,8 +13,8 @@ import "../styles/navbarelem.scss";
 
 interface NavbarElemProps {
   elem: string;
-  text: string;
-  active: boolean;
+  text?: string;
+  path: string;
   clickEvent: MouseEventHandler;
   rightMargin?: boolean;
 }
@@ -22,17 +22,28 @@ interface NavbarElemProps {
 const NavbarElem = ({
   elem = "",
   text = "",
-  active = false,
-  clickEvent = undefined,
+  path = "/",
+  clickEvent = () => console.log(this, "was clicked"),
   rightMargin = false,
 }: NavbarElemProps) => {
+  const getCurrentPage = (): string => {
+    const url = location.href ? location.href : "";
+    const splitUrl = url.split("/");
+    const currentPage = `/${splitUrl[splitUrl.length - 1]}`;
+
+    return currentPage;
+  };
+
+  const currentPage = getCurrentPage();
+  const active = path === currentPage;
+  console.log(currentPage);
   const classes = `navbar-link ${active && "active"} ${
     rightMargin && "right-margin"
   }`;
 
   if (active) {
     return (
-      <a className={classes}>
+      <Link to={path} className={classes}>
         {elem === "home" ? (
           <img
             src={LogoImg}
@@ -43,11 +54,11 @@ const NavbarElem = ({
         ) : (
           text
         )}
-      </a>
+      </Link>
     );
   } else {
     return (
-      <a className={classes} onClick={clickEvent}>
+      <Link to={path} className={classes} onClick={clickEvent}>
         {elem === "home" ? (
           <img
             src={LogoImg}
@@ -58,7 +69,7 @@ const NavbarElem = ({
         ) : (
           text
         )}
-      </a>
+      </Link>
     );
   }
 };

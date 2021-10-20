@@ -12,20 +12,8 @@ const Navbar = (props) => {
 
   const [navOpen, setNavOpen] = useState(false);
 
-  const navbarElems = ["home", "posts", "resources"];
-  const navbarElemMap: Map<string, string> = new Map();
-  const navbarLinksMap: Map<string, string> = new Map();
-
-  navbarElemMap.set("home", "Go home");
-  navbarElemMap.set("posts", "All posts");
-  navbarElemMap.set("resources", "Recommended resources");
-
-  navbarLinksMap.set("home", "/");
-  navbarLinksMap.set("posts", "/posts");
-  navbarLinksMap.set("resources", "/resources");
-
   const setActivePageAndCache = (page: string): void => {
-    sessionStorage.setIem("activePage", page);
+    sessionStorage.setItem("activePage", page);
     setActivePage(page);
   };
 
@@ -35,22 +23,21 @@ const Navbar = (props) => {
         <div className="nav-div">
           <NavbarElem
             elem="home"
-            text={navbarElemMap.get("home")}
-            active={"home" === activePage}
+            path="/"
             clickEvent={() => setActivePageAndCache("home")}
           />
           <div className="nav-text-div">
             <NavbarElem
               elem="posts"
-              text={navbarElemMap.get("posts")}
-              active={"posts" === activePage}
+              text="All posts"
+              path="/posts"
               clickEvent={() => setActivePageAndCache("posts")}
               rightMargin
             />
             <NavbarElem
               elem="resources"
-              text={navbarElemMap.get("resources")}
-              active={"resources" === activePage}
+              text="Recommended resources"
+              path="/resources"
               clickEvent={() => setActivePageAndCache("resources")}
             />
           </div>
@@ -63,21 +50,23 @@ const Navbar = (props) => {
         <div className="nav-div">
           <NavbarElem
             elem="home"
-            text={navbarElemMap.get("home")}
+            path="/"
             active={"home" === activePage}
             clickEvent={() => setActivePageAndCache("home")}
           />
           <div className="nav-text-div">
             <NavbarElem
               elem="posts"
-              text={navbarElemMap.get("posts")}
+              text="All posts"
+              path="/posts"
               active={"posts" === activePage}
               clickEvent={() => setActivePageAndCache("posts")}
               rightMargin
             />
             <NavbarElem
               elem="resources"
-              text={navbarElemMap.get("resources")}
+              text="Recommended resources"
+              path="/resources"
               active={"resources" === activePage}
               clickEvent={() => setActivePageAndCache("resources")}
             />
