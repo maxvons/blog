@@ -1,8 +1,8 @@
 ---
-path: "/learn-javascript"
-date: 2021-08-20T17:12:33.962Z
-title: "Learn JavaScript from a coding God!"
-minRead: 14
+path: "/learn-python"
+date: 2021-09-21T17:12:33.962Z
+title: "Learn Python from a coding God!"
+minRead: 20
 tags: [Development, Coding]
 ---
 

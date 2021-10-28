@@ -11,7 +11,7 @@ interface PageTitleProps {
   pageTitle: string;
   pageTitleMuted: string;
   pageMiniTitle: string;
-  pageMiniTitlePrimary: string;
+  pageMiniTitlePrimary?: string;
 }
 
 const PageTitle = ({
@@ -39,19 +39,19 @@ interface LayoutProps {
   pageTitle: string;
   pageTitleMuted: string;
   pageMiniTitle: string;
-  pageMiniTitlePrimary: string;
-  mutedFirst: boolean;
+  pageMiniTitlePrimary?: string;
+  mutedFirst?: boolean;
   activePage: string;
-  setActivePage: void;
+  setActivePage: React.Dispatch<React.SetStateAction<string>>;
 }
 const Layout = ({
   children = "",
   pageTitle = "What I've learned",
   pageTitleMuted = "from others",
   pageMiniTitle = "A concept by",
-  pageMiniTitlePrimary = "Maximilian von Stephanides",
+  pageMiniTitlePrimary = "",
   activePage = "index",
-  setActivePage = undefined,
+  setActivePage = () => console.log(this),
 }: LayoutProps) => {
   return (
     <div className="layout">

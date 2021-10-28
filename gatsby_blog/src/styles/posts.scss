@@ -1,0 +1,17 @@
+@import "variables";
+@import "typography";
+
+.post-div {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 90%;
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: $spacer-large;
+  margin-bottom: $spacer-very-large;
+}

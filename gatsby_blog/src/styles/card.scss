@@ -8,6 +8,7 @@
   position: relative;
   font-family: $font-stack-sans;
   box-shadow: $shadow-card;
+  max-width: 50rem;
 }
 
 .card-heading {
@@ -33,7 +34,21 @@
   font-weight: $font-weight-bold;
 }
 
-.right-margin-small {
+.min-read-div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.margin-left-very-small {
+  margin-left: $spacer-very-small;
+}
+
+.margin-right-mini {
+  margin-right: $spacer-mini;
+}
+
+.margin-right-small {
   margin-right: $spacer-small;
 }
 
@@ -101,4 +116,12 @@
   border-radius: 100%;
   line-height: 1;
   font-weight: $font-weight-black;
+}
+
+.no-shadow {
+  box-shadow: none;
+}
+
+a {
+  text-decoration: none;
 }

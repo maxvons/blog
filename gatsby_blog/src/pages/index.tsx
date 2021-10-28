@@ -20,7 +20,7 @@ const IndexPage = (props) => {
       activePage={activePage}
       setActivePage={setActivePage}
     >
-      <Seo title="Home " />
+      <Seo title="Home" />
       <Card
         heading="How to learn JavaScript"
         datePosted="Fri, 20.08.2021"

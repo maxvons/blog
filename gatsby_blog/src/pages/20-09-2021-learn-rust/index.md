@@ -1,7 +1,7 @@
 ---
-path: "/learn-javascript"
-date: 2021-08-20T17:12:33.962Z
-title: "Learn JavaScript from a coding God!"
+path: "/learn-rust"
+date: 2021-09-20T17:12:33.962Z
+title: "Learn Rust from a coding God!"
 minRead: 14
 tags: [Development, Coding]
 ---

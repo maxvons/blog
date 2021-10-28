@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-pages-index-tsx",
-    "path": "/",
-    "result": {"data":{"allMarkdownRemark":{"edges":[{"node":{"excerpt":"Oooooh-weeee, my second blog post!","id":"2b410ce9-6618-5eba-b95b-bddd2c8bce8a","frontmatter":{"title":"My Second Gatsby Post","date":"July 12, 2017","path":"/hello-world-2"}}},{"node":{"excerpt":"Oooooh-weeee, my first blog post!","id":"37a6bb85-4d50-5482-b27a-27d043aa5a9d","frontmatter":{"title":"My First Gatsby Post","date":"July 12, 2017","path":"/hello-world"}}}]}},"pageContext":{}},
-    "staticQueryHashes": ["63159454"]}
