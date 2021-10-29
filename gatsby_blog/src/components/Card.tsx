@@ -88,7 +88,7 @@ const Card = ({
         </div>
         <p className="excerpt">{excerpt}</p>
         <p className="read-article-button">
-          <span className="read-article-text">Read article </span>
+          <span className="read-article-text">Read article</span>
           <img
             className="read-article-icon"
             alt="Read article icon"

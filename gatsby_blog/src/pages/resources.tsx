@@ -1,89 +1,89 @@
+// React
 import React, { useState } from "react";
-import { Link, graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 
-import Landing from "../components/Landing";
+// Components
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
-import Card from "../components/Card";
+import ResourceCard from "../components/ResourceCard";
 
-const PostsPage = (props) => {
-  const { data } = props;
-  const { edges: posts } = data.allMarkdownRemark;
+// Assets
+import {
+  textStringDevelopment,
+  textStringDesign,
+  textStringDevEx,
+  textStringCareer,
+} from "../assets/textStrings";
+import DevIcon from "../assets/dev_icon.svg";
+import DesignIcon from "../assets/design_icon.svg";
+import DevExIcon from "../assets/devex_icon.svg";
+import CareerIcon from "../assets/career_icon.svg";
 
+// Styles
+import "../styles/resources.scss";
+
+const ResourcesPage = (props: any) => {
   const [activePage, setActivePage] = useState("index");
+
+  const resourceCards = [
+    {
+      heading: "Development",
+      text: textStringDevelopment,
+      linkText: "Go to dev resources",
+      altText: "A development icon",
+      path: "/dev-resources",
+      icon: DevIcon,
+    },
+    {
+      heading: "Design",
+      text: textStringDesign,
+      linkText: "Go to design resources",
+      altText: "A design icon",
+      path: "/design-resources",
+      icon: DesignIcon,
+    },
+    {
+      heading: "Dev experience",
+      text: textStringDevEx,
+      linkText: "Go to dev ex resources",
+      altText: "A dev ex icon",
+      path: "/dev-ex-resources",
+      icon: DevExIcon,
+    },
+    {
+      heading: "Career",
+      text: textStringCareer,
+      linkText: "Go to career resources",
+      altText: "A career icon",
+      path: "/career-resources",
+      icon: CareerIcon,
+    },
+  ];
+
   return (
     <Layout
-      pageTitle="What I've learned"
-      pageTitleMuted="from others"
-      pageMiniTitle="A concept by"
-      pageMiniTitlePrimary="Maximilian von Stephanides"
+      pageTitle="Useful resources"
+      pageTitleMuted="I've found"
+      pageMiniTitle="Articles, links, other blogs, and much more"
       activePage={activePage}
       setActivePage={setActivePage}
     >
-      <Card
-        heading="How to learn JavaScript"
-        datePosted="Fri, 20.08.2021"
-        minRead={14}
-        tags={["Development", "Coding"]}
-        excerpt="My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.
-        "
-        path="/learn-javascript"
-        newlyPosted
-      />
-      <div className="blog-posts">
-        {posts
-          .filter((post) => post.node.frontmatter.title.length > 0)
-          .map(({ node: post }) => {
-            return (
-              <div className="blog-post-preview" key={post.id}>
-                <h1>
-                  <Link to={post.frontmatter.path}>
-                    {post.frontmatter.title}
-                  </Link>
-                </h1>
-                <h2>{post.frontmatter.date}</h2>
-                <p>{post.excerpt}</p>
-              </div>
-            );
-          })}
-        <Seo title="Home" />
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
-        <StaticImage
-          src="../images/gatsby-astronaut.png"
-          width={300}
-          quality={95}
-          formats={["auto", "webp", "avif"]}
-          alt="A Gatsby astronaut"
-          style={{ marginBottom: `1.45rem` }}
-        />
-        <p>
-          <Link to="/page-2/">Go to page 2</Link> <br />
-          <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-        </p>
+      <Seo title="Resources" />
+      <div className="resources-div">
+        {resourceCards.map((resourceCard) => {
+          return (
+            <ResourceCard
+              heading={resourceCard.heading}
+              text={resourceCard.text}
+              linkText={resourceCard.linkText}
+              altText={resourceCard.altText}
+              path={resourceCard.path}
+              icon={resourceCard.icon}
+            />
+          );
+        })}
       </div>
     </Layout>
   );
 };
 
-export const pageQuery = graphql`
-  query ResourceQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
-      edges {
-        node {
-          excerpt(pruneLength: 250)
-          id
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            path
-          }
-        }
-      }
-    }
-  }
-`;
-
-export default PostsPage;
+export default ResourcesPage;

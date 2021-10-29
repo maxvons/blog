@@ -170,7 +170,6 @@ const PostsPage = (props: any) => {
       <Seo title="Posts" />
       <div className="post-div">
         <PostFilter
-          searchString={searchString}
           setSearchString={setSearchString}
           activeTags={activeTags}
           setActiveTags={setActiveTags}

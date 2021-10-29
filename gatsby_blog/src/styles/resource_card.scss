@@ -1,0 +1,16 @@
+@import "variables";
+@import "typography";
+
+.resource-card {
+  padding: 3.2rem;
+  border: 2px solid $color-border;
+  border-radius: $border-radius;
+  position: relative;
+  font-family: $font-stack-sans;
+}
+
+.card-heading-div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+}

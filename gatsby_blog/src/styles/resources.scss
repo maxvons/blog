@@ -1,0 +1,14 @@
+@import "variables";
+@import "typography";
+
+.resources-div {
+  display: grid;
+  grid-template-columns: 50rem 50rem;
+  grid-template-rows: auto;
+  grid-gap: 0;
+  justify-items: center;
+  justify-content: center;
+  grid-gap: $spacer-large;
+  width: 90%;
+  margin-bottom: $spacer-very-large;
+}
