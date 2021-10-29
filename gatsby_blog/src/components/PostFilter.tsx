@@ -8,7 +8,6 @@ import SearchIcon from "../assets/search_icon.svg";
 import "../styles/post_filter.scss";
 
 interface PostFilterProps {
-  searchString: string;
   setSearchString: (searchValue: string) => void;
   activeTags: Array<string>;
   setActiveTags: (tags: Array<string>) => void;
@@ -17,14 +16,8 @@ interface PostFilterProps {
 }
 
 const PostFilter = (props: PostFilterProps) => {
-  const {
-    searchString,
-    setSearchString,
-    activeTags,
-    setActiveTags,
-    sortBy,
-    setSortBy,
-  } = props;
+  const { setSearchString, activeTags, setActiveTags, sortBy, setSortBy } =
+    props;
   const tags: Array<string> = [
     "Development",
     "Review",
