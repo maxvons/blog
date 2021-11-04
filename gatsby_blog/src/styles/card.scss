@@ -5,10 +5,11 @@
   padding: 3.2rem;
   border: 2px solid $color-border;
   border-radius: $border-radius;
-  position: relative;
   font-family: $font-stack-sans;
   box-shadow: $shadow-card;
+  background-color: $color-background;
   max-width: 50rem;
+  position: relative;
 }
 
 .card-heading {
@@ -124,4 +125,22 @@
 
 a {
   text-decoration: none;
+}
+
+.dots {
+  z-index: -1;
+}
+
+.dots-left {
+  position: absolute;
+  left: 0;
+  bottom: -$spacer-medium;
+  transform: translateX(-50%);
+}
+
+.dots-right {
+  position: absolute;
+  right: 0;
+  top: -$spacer-medium;
+  transform: translateX(50%);
 }

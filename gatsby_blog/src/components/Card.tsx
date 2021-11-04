@@ -8,6 +8,7 @@ import { Link } from "gatsby";
 import ArrowIcon from "../assets/arrow_icon.svg";
 import CoffeeIcon from "../assets/coffee_icon.svg";
 import { getCoffeeCups } from "../utilityFunctions";
+import Dots from "../assets/dots.svg";
 
 // Styles
 import "../styles/card.scss";
@@ -22,6 +23,7 @@ interface CardProps {
   marginBottom?: string;
   newlyPosted?: boolean;
   noShadow?: boolean;
+  showDots?: boolean;
 }
 
 const Card = ({
@@ -34,6 +36,7 @@ const Card = ({
   marginBottom = undefined,
   newlyPosted = false,
   noShadow = false,
+  showDots = false,
 }: CardProps) => {
   const cardClasses = `card ${marginBottom && marginBottom} ${
     noShadow && "no-shadow"
@@ -95,6 +98,8 @@ const Card = ({
             src={ArrowIcon}
           ></img>
         </p>
+        {showDots && <img className="dots dots-right" src={Dots} alt="" />}
+        {showDots && <img className="dots dots-left" src={Dots} alt="" />}
       </div>
     </Link>
   );
