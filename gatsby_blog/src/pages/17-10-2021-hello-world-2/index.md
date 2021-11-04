@@ -5,6 +5,7 @@ title: "My Second Gatsby Post"
 miniTitle: "This is my second Gatsby post"
 minRead: 3
 tags: [Review, Tech]
+excerpt: "Not much to say about this one either."
 ---
 
 Oooooh-weeee, my second blog post!

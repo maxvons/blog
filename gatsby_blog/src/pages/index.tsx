@@ -37,7 +37,7 @@ const IndexPage = (props: any) => {
           datePosted={newestPost.node.frontmatter.date}
           minRead={newestPost.node.frontmatter.minRead}
           tags={newestPost.node.frontmatter.tags}
-          excerpt={newestPost.node.excerpt}
+          excerpt={newestPost.node.frontmatter.excerpt}
           path={newestPost.node.frontmatter.path}
           marginBottom="margin-bottom-very-large"
           newlyPosted
@@ -55,13 +55,13 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
-          excerpt(pruneLength: 100)
           id
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
             minRead
             tags
+            excerpt
             path
           }
         }

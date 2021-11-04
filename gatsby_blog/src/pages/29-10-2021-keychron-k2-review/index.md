@@ -5,6 +5,7 @@ title: "Keychron K2 review"
 miniTitle: "What I learned from using the Keychron K2 for a year"
 minRead: 20
 tags: [Review, Tech]
+excerpt: "What I like about the Keychron K2, and what I think could be better."
 ---
 
 ## Introduction

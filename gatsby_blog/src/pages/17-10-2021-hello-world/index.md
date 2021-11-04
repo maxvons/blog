@@ -5,6 +5,7 @@ title: "My First Gatsby Post"
 miniTitle: "This is my first Gatsby post"
 minRead: 2
 tags: [Life, Career]
+excerpt: "Not much to say about this one."
 ---
 
 Oooooh-weeee, my first blog post!

@@ -211,7 +211,7 @@ const PostsPage = (props: any) => {
                   datePosted={post.frontmatter.date}
                   minRead={post.frontmatter.minRead}
                   tags={post.frontmatter.tags}
-                  excerpt={post.excerpt}
+                  excerpt={post.frontmatter.excerpt}
                   path={post.frontmatter.path}
                   noShadow
                 />
@@ -235,6 +235,7 @@ export const pageQuery = graphql`
             date(formatString: "DD MMMM, YYYY")
             minRead
             tags
+            excerpt
             path
           }
         }
