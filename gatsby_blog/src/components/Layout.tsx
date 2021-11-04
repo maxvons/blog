@@ -9,16 +9,16 @@ import "../styles/layout.scss";
 
 interface PageTitleProps {
   pageTitle: string;
-  pageTitleMuted: string;
-  pageMiniTitle: string;
+  pageTitleMuted?: string;
+  pageMiniTitle?: string;
   pageMiniTitlePrimary?: string;
 }
 
 const PageTitle = ({
   pageTitle = "What I've learned",
-  pageTitleMuted = "from others",
-  pageMiniTitle = "A concept by",
-  pageMiniTitlePrimary = "Maximilian von Stephanides",
+  pageTitleMuted,
+  pageMiniTitle,
+  pageMiniTitlePrimary,
 }: PageTitleProps) => {
   return (
     <div className="page-title">
@@ -37,7 +37,7 @@ const PageTitle = ({
 interface LayoutProps {
   children: any;
   pageTitle: string;
-  pageTitleMuted: string;
+  pageTitleMuted?: string;
   pageMiniTitle: string;
   pageMiniTitlePrimary?: string;
   mutedFirst?: boolean;
@@ -47,9 +47,9 @@ interface LayoutProps {
 const Layout = ({
   children = "",
   pageTitle = "What I've learned",
-  pageTitleMuted = "from others",
-  pageMiniTitle = "A concept by",
-  pageMiniTitlePrimary = "",
+  pageTitleMuted,
+  pageMiniTitle,
+  pageMiniTitlePrimary,
   activePage = "index",
   setActivePage = () => console.log(this),
 }: LayoutProps) => {

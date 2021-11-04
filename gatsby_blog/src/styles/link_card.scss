@@ -1,0 +1,40 @@
+@import "variables";
+@import "typography";
+
+.link-card {
+  padding: 3.2rem;
+  border: 2px solid $color-border;
+  border-radius: $border-radius;
+  position: relative;
+  font-family: $font-stack-sans;
+}
+
+.link-card-heading {
+  color: $color-text-primary;
+  font-size: $font-size-heading;
+  font-weight: $font-weight-black;
+  margin-bottom: $spacer-medium;
+  line-height: 1;
+}
+
+.link-list {
+  display: flex;
+  flex-flow: column nowrap;
+  padding-left: 0;
+  list-style: none;
+}
+
+.link-ele {
+  font-size: $font-size-normal;
+  color: $color-text-primary;
+  font-family: $font-stack-serif;
+  text-decoration: underline;
+}
+
+.link-ele:not(:last-child) {
+  margin-bottom: $spacer-small;
+}
+
+.link-card-link {
+  color: $color-text-primary;
+}

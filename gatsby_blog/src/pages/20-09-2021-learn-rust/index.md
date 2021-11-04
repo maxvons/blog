@@ -2,6 +2,7 @@
 path: "/learn-rust"
 date: 2021-09-20T17:12:33.962Z
 title: "Learn Rust from a coding God!"
+miniTitle: "How to learn Rust with theory and practice"
 minRead: 14
 tags: [Development, Coding]
 ---

@@ -1,0 +1,91 @@
+@import "variables";
+@import "typography";
+
+.blog-post {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-bottom: $spacer-very-large;
+  width: 90%;
+}
+
+.portrait-img {
+  border-radius: 100%;
+  box-shadow: $shadow-portrait;
+  margin-bottom: $spacer-large;
+}
+
+.posted-text {
+  color: $color-text-secondary;
+  font-family: $font-stack-sans;
+  font-size: $font-size-uppercase;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-uppercase;
+  margin-bottom: $spacer-small;
+}
+
+.black-text {
+  font-weight: $font-weight-black;
+}
+
+.margin-left-small {
+  margin-left: $spacer-small;
+}
+
+.secondary-information {
+  font-family: $font-stack-sans;
+}
+
+.blog-post-content {
+  margin-bottom: $spacer-very-large;
+}
+
+.blog-post-content h2,
+.blog-post-content p {
+  color: $color-text-primary;
+  max-width: 65rem;
+}
+
+.blog-post-content h2 {
+  font-family: $font-stack-sans;
+  font-size: $font-size-heading;
+  font-weight: $font-weight-black;
+}
+
+.blog-post-content h2 {
+  margin-bottom: $spacer-small;
+}
+
+.blog-post-content p {
+  font-family: $font-stack-serif;
+  font-size: $font-size-normal;
+  font-weight: $font-weight-normal;
+  line-height: 1.5;
+}
+
+.blog-post-content p:not(:last-child) {
+  margin-bottom: $spacer-large;
+}
+
+.heart-icon {
+  background-color: $color-primary-600;
+  padding: $spacer-small;
+  border-radius: 100%;
+  box-shadow: $shadow-heart;
+  margin-bottom: $spacer-small;
+}
+
+.heart-text {
+  font-family: $font-stack-sans;
+  font-size: $font-size-uppercase;
+  font-weight: $font-weight-bold;
+  color: $color-text-secondary;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-uppercase;
+}
+
+.heart-count {
+  color: $color-primary-600;
+  font-weight: $font-weight-bold;
+}
