@@ -10,7 +10,30 @@
 }
 
 .giving-back-div {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   margin-bottom: $spacer-very-large;
+  width: 100%;
+}
+
+.card-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.article-div {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 
 .two-choices-wrapper {
@@ -69,4 +92,30 @@
   font-family: $font-stack-serif;
   font-weight: $font-weight-normal;
   line-height: 1.5;
+}
+
+.circle-red {
+  position: absolute;
+  right: 0;
+  top: -$spacer-medium;
+}
+
+.circle-green {
+  position: absolute;
+  left: 0;
+  top: -$spacer-medium;
+}
+
+.circle-green-article {
+  position: absolute;
+  right: 0;
+  top: -$spacer-large;
+  transform: rotate(180deg);
+}
+
+.circle-red-article {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: rotate(180deg);
 }

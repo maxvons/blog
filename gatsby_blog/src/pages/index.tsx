@@ -1,16 +1,26 @@
+// React
 import React, { useState } from "react";
-import { Link, graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 
+// Gatsby
+import { graphql } from "gatsby";
+
+// Components
 import Landing from "../components/Landing";
 import Layout from "../components/Layout";
 import Seo from "../components/Seo";
 import Card from "../components/Card";
 
-const IndexPage = (props) => {
+// Assets
+import RedCircle from "../assets/red_circle.svg";
+
+const IndexPage = (props: any) => {
   const { data } = props;
+  const { edges: posts } = data.allMarkdownRemark;
 
   const [activePage, setActivePage] = useState("index");
+
+  const newestPost = posts.length > 1 ? posts[0] : undefined;
+
   return (
     <Layout
       pageTitle="What I've learned"
@@ -21,20 +31,43 @@ const IndexPage = (props) => {
       setActivePage={setActivePage}
     >
       <Seo title="Home" />
-      <Card
-        heading="How to learn JavaScript"
-        datePosted="Fri, 20.08.2021"
-        minRead={14}
-        tags={["Development", "Coding"]}
-        excerpt="My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.
-        "
-        path="/learn-javascript"
-        marginBottom="margin-bottom-very-large"
-        newlyPosted
-      />
+      <div className="card-div">
+        <Card
+          heading={newestPost.node.frontmatter.title}
+          datePosted={newestPost.node.frontmatter.date}
+          minRead={newestPost.node.frontmatter.minRead}
+          tags={newestPost.node.frontmatter.tags}
+          excerpt={newestPost.node.excerpt}
+          path={newestPost.node.frontmatter.path}
+          marginBottom="margin-bottom-very-large"
+          newlyPosted
+          showDots
+        />
+        <img className="circle-red" src={RedCircle} alt="" />
+      </div>
       <Landing />
     </Layout>
   );
 };
+
+export const pageQuery = graphql`
+  query LandingQuery {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          excerpt(pruneLength: 100)
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
+            minRead
+            tags
+            path
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;

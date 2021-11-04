@@ -5,6 +5,10 @@ import React from "react";
 import CardDark from "../components/CardDark";
 import Card from "../components/Card";
 
+// Assets
+import RedCircle from "../assets/red_circle.svg";
+import GreenCircle from "../assets/green_circle.svg";
+
 // Styles
 import "../styles/landing.scss";
 
@@ -26,6 +30,7 @@ const Landing = () => {
           at my developer gear recommendations, and check out useful resources
           I’ve found on the web.
         </p>
+        <img className="circle-green" src={GreenCircle} alt="" />
       </div>
       <div className="two-choices-wrapper">
         <div className="two-choices-div">
@@ -70,6 +75,8 @@ const Landing = () => {
           marginBottom="margin-bottom-very-large"
           path="/learn-javascript"
         />
+        <img className="circle-green-article" src={GreenCircle} alt="" />
+        <img className="circle-red-article" src={RedCircle} alt="" />
       </div>
     </div>
   );
