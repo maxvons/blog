@@ -30,3 +30,14 @@
 .right-margin-large {
   margin-right: $spacer-large;
 }
+
+@media screen and (max-width: $breakpoint-mobile) and (-webkit-min-device-pixel-ratio: 1) {
+  .card-heading-dark {
+    font-size: $font-size-heading-mobile;
+    margin-bottom: $spacer-small;
+  }
+
+  .excerpt-dark {
+    font-size: $font-size-normal-mobile;
+  }
+}

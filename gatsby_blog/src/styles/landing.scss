@@ -16,7 +16,7 @@
   align-items: center;
   position: relative;
   margin-bottom: $spacer-very-large;
-  width: 100%;
+  width: 90%;
 }
 
 .card-div {
@@ -33,7 +33,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 100%;
+  width: 90%;
 }
 
 .two-choices-wrapper {
@@ -51,6 +51,7 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  width: 90%;
 }
 
 .two-choices-text-div {
@@ -60,6 +61,10 @@
 .two-choices-cards-div {
   display: flex;
   flex-flow: row nowrap;
+
+  & > :first-child {
+    margin-right: $spacer-medium;
+  }
 }
 
 .heading {
@@ -118,4 +123,65 @@
   left: 0;
   bottom: 0;
   transform: rotate(180deg);
+}
+
+@media screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) and (-webkit-min-device-pixel-ratio: 1) {
+  .circle-red,
+  .circle-green-article {
+    right: -$spacer-large-plus;
+  }
+
+  .circle-green,
+  .circle-red-article {
+    left: -$spacer-large-plus;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) and (-webkit-min-device-pixel-ratio: 1) {
+  .card-div {
+    width: 90%;
+  }
+
+  .heading {
+    font-size: $font-size-heading-mobile;
+    margin-bottom: $spacer-small;
+  }
+
+  .normal-text {
+    font-size: $font-size-normal-mobile;
+  }
+
+  .giving-back-div {
+    margin-bottom: $spacer-large;
+  }
+
+  .two-choices-wrapper {
+    padding: $spacer-large 0;
+    margin-bottom: $spacer-large;
+  }
+
+  .two-choices-text-div {
+    margin-bottom: $spacer-medium;
+  }
+
+  .two-choices-cards-div {
+    flex-flow: column nowrap;
+    align-items: center;
+
+    & > :first-child {
+      margin-right: 0;
+      margin-bottom: $spacer-medium;
+    }
+  }
+
+  .margin-bottom-large {
+    margin-bottom: $spacer-medium;
+  }
+
+  .circle-red,
+  .circle-green,
+  .circle-red-article,
+  .circle-green-article {
+    display: none;
+  }
 }
