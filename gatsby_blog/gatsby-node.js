@@ -12,7 +12,7 @@ const { report } = require("process");
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const blogPostTemplate = path.resolve(`src/templates/blog_post.jsx`);
+  const blogPostTemplate = path.resolve(`src/templates/blog_post.tsx`);
 
   const result = await graphql(`
     {

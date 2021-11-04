@@ -46,7 +46,7 @@ const ResourcesPage = (props: any) => {
       text: textStringDevEx,
       linkText: "Go to dev ex resources",
       altText: "A dev ex icon",
-      path: "/dev-ex-resources",
+      path: "/devex-resources",
       icon: DevExIcon,
     },
     {

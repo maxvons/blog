@@ -28,12 +28,15 @@ $color-shadow-heart: rgba(236, 0, 53, 0.2);
 // Light element colors
 $color-border: #e1e1e1;
 $color-shadow-card: #e1e1e1;
+$color-shadow-portrait: #cff0e7;
 
 // Dark element colors
 $color-border-dark: #969595;
 
 // Shadows
 $shadow-card: 0px 15px 37.5px $color-shadow-card;
+$shadow-portrait: 0px 10px 25px $color-shadow-portrait;
+$shadow-heart: 0px 8px 20px $color-shadow-heart;
 
 // Font stacks
 $font-stack-sans: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
