@@ -90,14 +90,14 @@ const Card = ({
           })}
         </div>
         <p className="excerpt">{excerpt}</p>
-        <p className="read-article-button">
-          <span className="read-article-text">Read article</span>
+        <div className="read-article-button">
+          <p className="read-article-text">Read article</p>
           <img
             className="read-article-icon"
             alt="Read article icon"
             src={ArrowIcon}
           ></img>
-        </p>
+        </div>
         {showDots && <img className="dots dots-right" src={Dots} alt="" />}
         {showDots && <img className="dots dots-left" src={Dots} alt="" />}
       </div>

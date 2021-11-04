@@ -39,7 +39,11 @@ p {
 }
 
 p  {
-  font-size: 2rem;
+  font-size: $font-size-normal;
+}
+
+.layout {
+  overflow: hidden;
 }
 
 .header {
@@ -96,4 +100,27 @@ p  {
 
 .muted {
   color: $color-text-muted;
+}
+
+@media only screen and (max-device-width: $breakpoint-mobile) and (-webkit-min-device-pixel-ratio: 1) {
+  .header {
+    margin-bottom: $spacer-medium;
+  }
+
+  .main-title {
+    font-size: $font-size-title-mobile;
+  }
+
+  .mini-title {
+    font-size: $font-size-uppercase-mobile;
+    margin-bottom: $spacer-very-small;
+  }
+
+  .footer {
+    font-size: $font-size-uppercase-mobile;
+  }
+
+  p {
+    font-size: $font-size-normal-mobile;
+  }
 }

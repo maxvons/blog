@@ -45,7 +45,14 @@ const IndexPage = (props: any) => {
         />
         <img className="circle-red" src={RedCircle} alt="" />
       </div>
-      <Landing />
+      <Landing
+        cardHeading={newestPost.node.frontmatter.title}
+        cardDate={newestPost.node.frontmatter.date}
+        cardMinRead={newestPost.node.frontmatter.minRead}
+        cardTags={newestPost.node.frontmatter.tags}
+        cardExcerpt={newestPost.node.frontmatter.excerpt}
+        cardPath={newestPost.node.frontmatter.path}
+      />
     </Layout>
   );
 };

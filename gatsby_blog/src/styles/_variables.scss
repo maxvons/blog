@@ -56,7 +56,7 @@ $font-size-uppercase: 1.2rem;
 
 // Font sizes mobile
 $font-size-title-mobile: 4.8rem;
-$font-size-heading-mobile: 2.4rem;
+$font-size-heading-mobile: 2.8rem;
 $font-size-normal-mobile: 1.8rem;
 $font-size-secondary-mobile: 1.2rem;
 $font-size-uppercase-mobile: 1rem;
@@ -87,3 +87,9 @@ $spacer-small: 1.6rem;
 $spacer-very-small-plus: 1.2rem;
 $spacer-very-small: 0.8rem;
 $spacer-mini: 0.4rem;
+
+// Breakpoints
+$breakpoint-filter: 1400px;
+$breakpoint-tablet: 1200px;
+$breakpoint-mobile: 950px;
+$breakpoint-iphone: 375px;

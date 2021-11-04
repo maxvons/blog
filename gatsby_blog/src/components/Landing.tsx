@@ -12,7 +12,23 @@ import GreenCircle from "../assets/green_circle.svg";
 // Styles
 import "../styles/landing.scss";
 
-const Landing = () => {
+interface LandingProps {
+  cardHeading: string;
+  cardDate: string;
+  cardMinRead: number;
+  cardTags: Array<string>;
+  cardExcerpt: string;
+  cardPath: string;
+}
+
+const Landing = ({
+  cardHeading,
+  cardDate,
+  cardMinRead,
+  cardTags,
+  cardExcerpt,
+  cardPath,
+}: LandingProps) => {
   return (
     <div className="landing-div">
       <div className="giving-back-div">
@@ -50,7 +66,6 @@ const Landing = () => {
               heading="Check out all my blog posts"
               excerpt="Technical articles, gear reccomendations, fun stuff I’ve learned, and more."
               path="/posts"
-              rightMargin
             />
             <CardDark
               heading="Check out my useful resources"
@@ -66,14 +81,13 @@ const Landing = () => {
           newest article right here.
         </h2>
         <Card
-          heading="How to learn JavaScript"
-          datePosted="Fri, 20.08.2021"
-          minRead={14}
-          tags={["Development", "Coding"]}
-          excerpt="My money's in that office, right? If she start giving me some bullshit about it ain't there, and we got to go someplace else and get it, I'm gonna shoot you in the head then and there.
-      "
+          heading={cardHeading}
+          datePosted={cardDate}
+          minRead={cardMinRead}
+          tags={cardTags}
+          excerpt={cardExcerpt}
+          path={cardPath}
           marginBottom="margin-bottom-very-large"
-          path="/learn-javascript"
         />
         <img className="circle-green-article" src={GreenCircle} alt="" />
         <img className="circle-red-article" src={RedCircle} alt="" />
